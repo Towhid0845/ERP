@@ -1,0 +1,127 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.employee_information_table {
+  margin: 15px 0 20px 0;
+  border-top: 1px solid $border-colour;
+  padding-top: 10px;
+
+  .personal_info_report {
+    .profile {
+      .text {
+
+        .title {
+          @include font(22px, 600);
+        }
+
+        span {
+          @include font(13px, 500);
+          color: $secondary;
+          display: block;
+        }
+
+        h6 {
+          @include font(14px, 600);
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+
+  .company_info_report {
+    .title {
+      @include font(24px, 700);
+    }
+
+    .name {
+      @include font(32px, 700);
+      margin: 10px 0 5px;
+    }
+
+    p {
+      @include font(16px, 500);
+    }
+  }
+}
+
+.table_top_action {
+  margin-bottom: 6px;
+
+  .input_groups {
+    margin-bottom: 0;
+  }
+
+  .year_ {
+    width: 100px;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 34px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .select2-container .select2-selection--single {
+    height: 34px;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 34px;
+  }
+
+  .print_btn {
+    background-color: #2EBC8C;
+    border: 0;
+    color: $white;
+    border-radius: 3px;
+    @include font(13px, 600);
+    padding: 4px 8px;
+
+    &:hover {
+      background-color: $black;
+    }
+  }
+}
+
+.attendence_report {
+  max-width: 100%;
+
+  .table_head {
+    background-color: $black;
+    color: $white;
+  }
+
+  .table_sidebar {
+    background-color: $primary;
+    color: $white;
+  }
+
+  .off_day {
+    background-color: $primary;
+    color: $white;
+  }
+
+  .late {
+    color: $primary;
+  }
+
+  .absent {
+    color: $primary;
+  }
+
+  .year {
+    width: 100px;
+    background-color: $black;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h5 {
+      @include font(32px, 700);
+      color: $white;
+      transform: rotate(-90deg);
+    }
+  }
+
+}

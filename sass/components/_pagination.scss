@@ -1,0 +1,43 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.pagination {
+  margin-top: 24px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+
+  ul {
+    display: flex;
+
+    li {
+      margin: 0 4px;
+
+      a {
+        width: 35px;
+        background-color: $white;
+        height: 35px;
+        text-align: center;
+        line-height: 33px;
+        border: 1px solid #cacdcf;
+        @include font(15px, 500);
+        color: $black;
+        border-radius: 50%;
+        &:hover{
+          background-color: $primary;
+          color: $white;
+          border-color: $primary;
+        }
+      }
+    }
+
+    li.active {
+      a {
+        background-color: $primary;
+        border-color: $primary;
+        color: $white;
+      }
+    }
+
+  }
+}

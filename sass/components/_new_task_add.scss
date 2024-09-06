@@ -1,0 +1,159 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.new_task_add_header {
+  margin-bottom: 12px;
+
+  h4 {
+    @include font(18px, 500);
+  }
+
+  .close_new_task {
+    i {
+      font-size: 20px;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      margin-left: auto;
+      cursor: pointer;
+    }
+  }
+}
+
+.new_task_add_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: 0.3s;
+}
+
+.new_task_add {
+  background-color: $white;
+  padding: 30px;
+  padding-top: 14px;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 8px;
+  transform: translateY(-30px);
+  transition-duration: 0.3s;
+
+  span {
+    display: block;
+  }
+
+  .task_left_side {
+    .input_groups {
+      textarea {
+        height: 155px;
+      }
+    }
+  }
+
+  .task_left_side {
+    background-color: $body;
+    padding: 20px;
+    border-radius: 8px;
+    height: 100%;
+  }
+
+  .task_right_side {
+    background-color: $body;
+    padding: 20px;
+    border-radius: 8px;
+    height: 100%;
+
+    .task_info_sidebar {
+      padding-left: 0;
+
+      .sidebar_item {
+        .title {
+          @include font(15px, 500);
+          margin-bottom: 8px;
+        }
+
+        .form-check {
+          input {
+            width: 18px;
+            height: 18px;
+            border: 1px solid $black;
+            cursor: pointer;
+          }
+        }
+
+        .form-check-input:checked {
+          background-color: $primary;
+          border-color: $primary;
+        }
+
+        .form-check-label {
+          margin-bottom: 5px;
+          cursor: pointer;
+          @include font(13px, 600);
+          width: 100%;
+
+          span {
+            width: 100%;
+            display: block;
+            border-radius: 5px;
+            padding: 0px 14px;
+            color: $white;
+          }
+
+          span.high {
+            background-color: #1EB1C5;
+          }
+
+          span.medium {
+            background-color: #2EBC8C;
+          }
+
+          span.low {
+            background-color: #2A9EE0;
+          }
+        }
+
+        .action_btn {
+          background-color: $white;
+          border: 1px solid $border-colour;
+          padding: 4px 20px;
+          border-radius: 4px;
+          @include font(13px, 500);
+          color: rgba(0, 0, 0, 0.7);
+          text-align: left;
+          width: 100%;
+          margin-bottom: 5px;
+
+          &:hover {
+            background-color: $black;
+            color: $white;
+          }
+
+          i {
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.new_task_add_modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.new_task_add_modal.active .new_task_add {
+  transform: translateY(0) !important;
+}

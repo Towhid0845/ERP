@@ -1,0 +1,182 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+// content main
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  padding-left: 165px;
+  margin-top: 60px;
+  max-width: 100%;
+}
+
+.content_box {
+  padding-top: 15px;
+}
+
+// content widget box
+.content_widget_box {
+  width: 100%;
+  border-radius: 5px;
+  background-color: $white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+
+  .widget_title {
+    .title {
+      @include font(17px, 700);
+      color: $black;
+      padding: 10px 20px;
+
+      .task_counter_number {
+        @include font(20px, 600);
+      }
+    }
+  }
+
+  .widget_title.with_bg {
+    .title {
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+  .widget_main {
+    padding: 20px 20px;
+  }
+}
+
+// content time widget
+.time_widget {
+  background-color: $primary;
+  border-radius: 5px;
+  padding: 14px 25px;
+  margin-bottom: 24px;
+
+  .title {
+    @include font(20px, 700);
+    color: $white;
+  }
+
+  .in_time {
+    .intime_btn {
+      @include font(16px, 700);
+      color: $black;
+      border-radius: 50px;
+      background-color: $white;
+      border: 0;
+      padding: 12px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 20px;
+      filter: drop-shadow(0 5px 6px rgba(34, 34, 34, 0.2));
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
+
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+// short summer widget
+.short_summery_widget {
+  .summery_item {
+    border-radius: 5px;
+    padding: 30px;
+
+    .icon {
+      i {
+        font-size: 56px;
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    .info {
+      .title {
+        @include font(18px, 500);
+        color: $white;
+        margin-bottom: 10px
+      }
+
+      .number {
+        @include font(34px, 900);
+        color: $white;
+      }
+    }
+  }
+
+  .summery_lable:first-child .summery_item {
+    background-color: #1EB1C5;
+  }
+
+  .summery_lable:nth-child(2) .summery_item {
+    background-color: #2EBC8C;
+  }
+
+  .summery_lable:nth-child(3) .summery_item {
+    background-color: #496092;
+  }
+
+  .summery_lable:nth-child(4) .summery_item {
+    background-color: #2A9EE0;
+  }
+
+  .summery_lable:nth-child(5) .summery_item {
+    background-color: #F4963B;
+  }
+
+  .summery_lable:nth-child(6) .summery_item {
+    background-color: #1FB562;
+  }
+
+  .summery_lable:nth-child(7) .summery_item {
+    background-color: #1B2850;
+  }
+
+  .summery_lable:nth-child(8) .summery_item {
+    background-color: #CF2771;
+  }
+
+  .summery_lable:nth-child(9) .summery_item {
+    background-color: #FFC107;
+  }
+}
+
+// attendence history
+.attendence_history {
+  table {
+
+    td {
+      padding: 30px 20px !important;
+    }
+
+    .title {
+      @include font(16px, 600);
+    }
+
+    .in {
+      background-color: #37A000;
+      color: $white;
+      border-radius: 20px;
+      padding: 5px 10px;
+      @include font(14px, 600)
+    }
+
+    .late_time {
+      background-color: $primary;
+    }
+
+    .out {
+      background-color: #008787;
+      color: $white;
+      border-radius: 20px;
+      padding: 3px 10px;
+      @include font(14px, 600)
+    }
+  }
+}

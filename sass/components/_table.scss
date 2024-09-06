@@ -1,0 +1,72 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+
+.table_normal {
+  .table-head {
+    background-color: $table-head;
+    color: $white;
+  }
+
+  .status_btn {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    border: 0;
+    border-radius: 20px;
+    padding: 0px 10px;
+    line-height: 22px;
+  }
+
+  .complete {
+    background-color: #198754;
+  }
+
+  .not-started {
+    background-color: #5372cf;
+  }
+
+  .on-hold {
+    background-color: #2E9BBD;
+  }
+
+  .working {
+    background-color: #EF4444;
+  }
+}
+
+td {
+  @include font(15px, 500)
+}
+
+.table_action_btn {
+  li {
+    display: inline-block;
+
+    .btn_ {
+      width: 27px;
+      height: 27px;
+      line-height: 27px;
+      text-align: center;
+      border-radius: 3px;
+      font-size: 13px;
+      color: $black;
+      color: $white;
+    }
+  }
+}
+
+.add_btn__{
+  width: 35px;
+  height: 35px;
+  background-color: #5372cf;
+  text-align: center;
+  line-height: 35px;
+  color: $white;
+  border-radius: 50%;
+  border: 0;
+  margin-bottom: 14px;
+  &:hover{
+    background-color: $black;
+  }
+}

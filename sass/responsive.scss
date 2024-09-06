@@ -1,0 +1,606 @@
+@media (min-width:1400px) and (max-width:1799px) {
+
+  // task management board start
+  .content {
+    max-width: 100%;
+  }
+
+  // task management board end
+}
+
+@media (min-width:1200px) and (max-width:1399px) {
+  // header part start
+
+  header .date-and-time .times h5 {
+    font-size: 19px;
+  }
+
+  // header part end
+  // sidebar part start
+  .sidebar {
+    width: 100px;
+  }
+
+  .sidebar .main_menu li .menu_item i {
+    font-size: 25px;
+    margin-bottom: 6px;
+  }
+
+  .sidebar .main_menu li .menu_item {
+    font-size: 13px;
+    padding: 18px 6px;
+  }
+
+  .sidebar .main_menu li .sub_sidebar_menu li a {
+    padding: 8px 24px;
+    font-size: 13px;
+  }
+
+  // sidebar part end
+  // content part start
+  .content_widget_box .widget_title .title {
+    font-size: 16px;
+  }
+
+  .short_summery_widget .summery_item .info .number {
+    font-size: 30px;
+  }
+
+  .content {
+    padding-left: 123px;
+  }
+
+  .time_widget {
+    padding: 17px 20px;
+  }
+
+  .time_widget .in_time .intime_btn {
+    font-size: 15px;
+    padding: 10px 22px;
+  }
+
+  .time_widget .title {
+    font-size: 17px;
+  }
+
+  .attendence_history table .in {
+    margin-top: 7px;
+    font-size: 13px;
+  }
+
+  .attendence_history table .out {
+    margin-top: 8px;
+    font-size: 13px;
+  }
+
+  .attendence_history table .title {
+    font-size: 15px;
+  }
+
+  .table_normal .status_btn {
+    font-size: 12px;
+  }
+
+  footer {
+    background-color: #ffffff;
+    padding: 12px 0;
+    margin-top: auto;
+    border-top: 1px solid #E3E3E3;
+    padding-left: 122px;
+  }
+
+  // content part end
+
+  // task management board start
+
+  .content {
+    margin-top: 50px;
+    max-width: 100%;
+  }
+
+  .content_box {
+    padding-top: 6px;
+  }
+
+  .task_scroll_container .task_body .task_board_column .task_card .tag {
+    margin-bottom: 0;
+  }
+
+  .task_scroll_container .task_body .task_board_column .task_card .image {
+    margin-bottom: 0;
+  }
+
+  .content_widget_box .widget_main {
+    padding: 12px 12px;
+  }
+
+  .task_scroll_container .task_body .task_board_column .task_card .tag li button {
+    font-size: 9px;
+    font-weight: 600;
+    padding: 0px 4px 0px 4px;
+    line-height: 15px;
+  }
+
+  .task_board_header .options li .option_link {
+    font-size: 13px;
+    padding: 2px 8px;
+  }
+
+  .task_board_header {
+    padding: 4px 10px;
+  }
+
+  .task_scroll_container .task_body .task_board_column .task_card {
+    padding: 8px;
+  }
+
+  .task_board_header .filter .filter_menu {
+    font-size: 13px;
+    padding: 3px 10px;
+  }
+
+  .task_scroll_container .task_body .task_board_column {
+    padding: 10px;
+  }
+
+  .task_scroll_container .task_body .task_board_column .task_card .task_title {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 4px;
+    margin-top: 3px;
+  }
+
+  .task_scroll_container .task_body .task_board_column .task_card .dates .icon i {
+    font-size: 20px;
+  }
+
+  .task_scroll_container .task_body .task_board_column {
+    height: calc(100vh - 200px);
+  }
+
+  .task_scroll_container .task_body .task_board_column .task_card .dates .icon {
+    margin-right: 8px;
+  }
+
+  .task_scroll_container .task_body .task_board_column .task_card .dates .info b {
+    font-size: 11px;
+  }
+
+  .task_scroll_container .task_body .task_board_title .title {
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+
+  .task_scroll_container .task_body .task_board_column .task_card .time_and_status .status label {
+    font-size: 13px;
+    font-weight: 500;
+    position: relative;
+    top: 2px;
+    margin-left: 8px;
+  }
+
+  .task_scroll_container .task_body .task_board_column .task_card .time_and_status .status {
+    padding: 0px 8px;
+  }
+
+  .task_scroll_container .task_body .task_board_column .task_card .see_details a {
+    font-size: 13px;
+    padding: 3px 10px;
+  }
+
+  .task_offcanvas_menu .filter_info .filter_block .form-check .form-check-label {
+    font-size: 13px;
+  }
+
+  .task_offcanvas_menu .filter_info .filter_block .form-check input {
+    width: 17px;
+    height: 17px;
+    margin-top: 6px;
+  }
+
+  .task_board_header {
+    margin-bottom: 12px;
+  }
+
+  .bread_crumb .left_info .title {
+    font-size: 16px;
+  }
+
+  .bread_crumb .right_info ul li {
+    font-size: 14px;
+  }
+
+  .task_scroll_container .task_body .task_board_column .task_card .task_done_status {
+    font-size: 10px;
+    margin-bottom: 5px;
+    line-height: 22px;
+  }
+
+  .task_scroll_container .scroll_btn {
+    width: 35px;
+    height: 60px;
+  }
+
+  .task_scroll_container .scroll_btn {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .scroll_btn_left {
+    left: -24px !important;
+    z-index: 999;
+  }
+
+  .scroll_btn_right {
+    right: -24px !important;
+    z-index: 999;
+  }
+
+
+  .task_scroll_container .task_body .task_board_title .title .title_content {
+    width: 150px;
+  }
+
+  .task_scroll_container .task_body .task_board_title .title .number_count {
+    margin-left: 0;
+  }
+
+
+  // task management board end
+}
+
+
+@media (min-width:991px) and (max-width:1199.98px) {
+
+  body {
+    overflow-x: hidden;
+    position: static;
+    display: unset;
+    flex-direction: column;
+    min-height: unset;
+  }
+
+  main {
+    display: unset;
+  }
+
+  // header part start
+  header .container-fluid {
+    padding: 0 12px 0 12px;
+  }
+
+  // header part end
+  // content part start
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .time_widget {
+    padding: 24px 25px;
+  }
+
+  .time_widget .title {
+    font-size: 16px;
+  }
+
+  .time_widget .in_time .intime_btn {
+    font-size: 15px;
+    padding: 8px 18px;
+  }
+
+  .office_time {
+    margin-bottom: 10px;
+  }
+
+  .attendence_history table td {
+    padding: 30px 12px !important;
+  }
+
+  .attendence_history table td {
+    padding: 30px 12px !important;
+    min-width: 130px;
+  }
+
+  .attendence_history table .in {
+    margin-top: 7px;
+  }
+
+  .attendence_history table .out {
+    margin-top: 8px;
+  }
+
+
+  // content part end
+  // footer part start
+  footer {
+    padding-left: 12px;
+  }
+
+  // footer part end
+}
+
+
+
+@media (min-width:768px) and (max-width:991.98px) {
+
+  body {
+    overflow-x: hidden;
+    position: static;
+    display: unset;
+    flex-direction: column;
+    min-height: unset;
+  }
+
+  main {
+    display: unset;
+  }
+
+  // header part start
+  header .container-fluid {
+    padding: 0 12px 0 12px;
+  }
+
+  // header part end
+  // content part start
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .time_widget {
+    padding: 24px 25px;
+  }
+
+  .time_widget .title {
+    font-size: 16px;
+  }
+
+  .time_widget .in_time .intime_btn {
+    font-size: 15px;
+    padding: 8px 18px;
+  }
+
+  .attendence_history table td {
+    padding: 30px 12px !important;
+  }
+
+  .attendence_history table td {
+    padding: 30px 12px !important;
+    min-width: 130px;
+  }
+
+  .attendence_history table .in {
+    margin-top: 7px;
+  }
+
+  .attendence_history table .out {
+    margin-top: 8px;
+  }
+
+
+  // content part end
+  // footer part start
+  footer {
+    padding-left: 12px;
+  }
+
+  // footer part end
+  // task management board start
+  .content_widget_box {
+    margin-top: 0 !important;
+  }
+
+  // task management board end
+}
+
+@media (min-width:576px) and (max-width:767.98px) {
+
+  body {
+    overflow-x: hidden;
+    position: static;
+    display: unset;
+    flex-direction: column;
+    min-height: unset;
+  }
+
+  main {
+    display: unset;
+  }
+
+  // header part start
+  header .container-fluid {
+    padding: 0 12px 0 12px;
+  }
+
+  // header part end
+  // content part start
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .time_widget {
+    padding: 24px 25px;
+  }
+
+  .time_widget .title {
+    font-size: 16px;
+  }
+
+  .time_widget .in_time .intime_btn {
+    font-size: 15px;
+    padding: 8px 18px;
+  }
+
+  .office_time {
+    margin-bottom: 10px;
+  }
+
+  .attendence_history table td {
+    padding: 30px 12px !important;
+  }
+
+  .attendence_history table td {
+    padding: 30px 12px !important;
+    min-width: 130px;
+  }
+
+  .attendence_history table .in {
+    margin-top: 7px;
+  }
+
+  .attendence_history table .out {
+    margin-top: 8px;
+  }
+
+  .short_summery_widget .summery_item .info .number {
+    font-size: 28px;
+  }
+
+  #working_progress {
+    height: 300px !important;
+  }
+
+  // content part end
+  // footer part start
+  footer {
+    padding-left: 12px;
+  }
+
+  // footer part end
+  // task management board start
+  .content_widget_box {
+    margin-top: 0 !important;
+  }
+
+  .task_scroll_container .task_body .task_board_column .task_card .task_title {
+    font-size: 14px;
+  }
+
+  // task management board end
+}
+
+
+@media (max-width:575.98px) {
+
+  body {
+    overflow-x: hidden;
+    position: static;
+    display: unset;
+    flex-direction: column;
+    min-height: unset;
+  }
+
+  main {
+    display: unset;
+  }
+
+  // header part start
+  header .container-fluid {
+    padding: 0 12px 0 12px;
+  }
+
+  // header part end
+  // content part start
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .time_widget {
+    padding: 24px 25px;
+  }
+
+  .time_widget .title {
+    font-size: 16px;
+  }
+
+  .time_widget .in_time .intime_btn {
+    font-size: 15px;
+    padding: 8px 18px;
+  }
+
+  .office_time {
+    margin-bottom: 10px;
+  }
+
+  .attendence_history table td {
+    padding: 30px 12px !important;
+  }
+
+  .attendence_history table td {
+    padding: 30px 12px !important;
+    min-width: 130px;
+  }
+
+  .attendence_history table .in {
+    margin-top: 7px;
+  }
+
+  .attendence_history table .out {
+    margin-top: 8px;
+  }
+
+  #working_progress {
+    height: 300px !important;
+  }
+
+  // content part end
+  // footer part start
+  footer {
+    padding-left: 12px;
+  }
+
+  // footer part end
+  // task management board start
+  .content_widget_box .widget_main {
+    padding: 12px 12px;
+  }
+
+  .content_widget_box {
+    margin-top: 0 !important;
+  }
+
+  .task_info_details {
+    padding: 30px 20px;
+  }
+
+  .task_info_details .task_info_sidebar {
+    padding-left: 0;
+  }
+
+  .d-flex.attachment_main {
+    display: unset !important;
+
+    .attachment_text {
+      margin-bottom: 20px;
+    }
+  }
+
+  .task_info_details .info_item .details h4 {
+    font-size: 15px;
+  }
+
+  .task_info_details .info_item+.info_item {
+    margin-top: 20px !important;
+  }
+
+  .task_info_details .info_item .details p {
+    font-size: 14px;
+  }
+
+  .task_info_details .info_item .attachment_text a {
+    margin-top: 10px;
+  }
+
+  // task management board end
+}

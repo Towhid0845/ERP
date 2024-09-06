@@ -1,0 +1,365 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.project_list_item {
+  width: 100%;
+  background-color: $white;
+  padding: 14px;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+
+  .project_title {
+    @include font(19px, 500);
+    color: $black;
+    transition: var(--transition);
+    margin-bottom: 4px;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  ul {
+    border-bottom: 1px solid $border-colour;
+    padding-bottom: 6px;
+
+    .sub_title {
+      @include font(13px, 500);
+      color: $secondary;
+      display: inline-block;
+
+      &:first-child {
+        margin-right: 10px;
+      }
+
+      b {
+        color: $black;
+      }
+    }
+  }
+
+  .clients {
+    @include font(16px, 500);
+    margin-top: 8px;
+    color: $secondary;
+
+    b {
+      color: $black;
+    }
+  }
+
+  .project_milestone {
+    margin-top: 8px;
+
+    .btn {
+      background-color: $black;
+      color: $white;
+
+      &:hover {
+        background-color: $primary;
+        border-color: $primary !important;
+      }
+    }
+  }
+
+  .contribution {
+    @include font(15px, 600);
+    margin-top: 10px;
+    color: $black;
+  }
+
+  .project_progress {
+    .progress-wrap {
+      margin-top: 10px;
+    }
+
+    .progress-title {
+      color: $black;
+    }
+
+    .progress-bar {
+      background-color: #55CE63;
+    }
+
+    .progress {
+      margin-top: 14px;
+    }
+  }
+}
+
+// project details
+
+.project_details {
+  .project_progress {
+    .progress-wrap {
+      margin-top: 10px;
+    }
+
+    .progress-title {
+      color: $black;
+    }
+
+    .progress-bar {
+      background-color: #55CE63;
+    }
+
+    .progress {
+      margin-top: 14px;
+    }
+  }
+}
+
+.uploaded_image_box {
+  .uploaded_img_name {
+    @include font(15px, 500);
+    margin-top: 4px;
+  }
+}
+
+.uploaded_attachment_list {
+  li {
+    border-bottom: 1px solid $border-colour;
+    margin: 2px 0 0;
+    padding: 10px 0;
+
+    .file_type {
+      flex: 0 0 auto;
+      background-color: $body;
+      border: 1px solid $border-colour;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      width: 50px;
+      border-radius: 5px;
+      font-size: 22px;
+      margin-right: 20px;
+    }
+
+    .file_name {
+      a {
+        color: #0d6efd;
+        @include font(15px, 500);
+      }
+    }
+
+    .file_date,
+    .file_size {
+      @include font(14px, 600);
+    }
+
+    .file_size {
+      color: $primary;
+      margin-left: 10px;
+    }
+
+    &:last-child {
+      border: 0;
+    }
+  }
+}
+
+.project_details_milestone {
+
+  // accordion
+  .accordion-button:focus {
+    box-shadow: none !important;
+    border-color: transparent !important;
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: $primary;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .accordion-item {
+    border: none;
+    position: relative;
+    margin-left: 13px;
+  }
+
+  .accordion-item::before {
+    position: absolute;
+    top: 13px;
+    left: -12px;
+    width: 12px;
+    height: 12px;
+    background-color: #bbbbbb;
+    border-radius: 50%;
+    content: "";
+  }
+
+  .accordion-item::after {
+    position: absolute;
+    top: 0;
+    left: -7px;
+    width: 2px;
+    height: 100%;
+    background-color: #bbbbbb;
+    border-radius: 50%;
+    content: "";
+  }
+
+  .accordion-button {
+    padding: 10px 14px !important;
+    @include font(16px, 600)
+  }
+
+  .accordion-button::after {
+    background-image: none;
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    background-image: none;
+  }
+
+  .accordion-body {
+    padding: 14px;
+  }
+}
+
+.assigned_user {
+  li+li {
+    margin-top: 16px;
+  }
+
+  .avatar {
+    flex: 0 0 auto;
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
+
+  .info {
+    margin-left: 14px;
+    color: $black;
+
+    .name {
+      @include font(16px, 600);
+      line-height: 20px;
+      transition: var(--transition)
+    }
+
+    .designation {
+      @include font(12px, 500);
+      line-height: 20px
+    }
+  }
+
+  a {
+    &:hover {
+      .name {
+        color: $primary;
+      }
+    }
+  }
+
+  b {
+    @include font(14px, 600);
+  }
+}
+
+.project_details_client_info {
+  .organization_info {
+    .image {
+      flex: 0 0 auto;
+
+      img {
+        width: 200px;
+      }
+    }
+
+    .text {
+      margin-top: 20px;
+
+      .title {
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      h6 {
+        @include font(14px, 500);
+        margin-top: 5px;
+        color: #888888;
+      }
+    }
+  }
+
+  .contact_person_label {
+    border-left: 2px dashed #949494;
+    padding-left: 100px;
+  }
+
+  .contact_person_title {
+    @include font(18px, 600);
+    margin-bottom: 12px;
+  }
+
+  .contact_person {
+    .image {
+      flex: 0 0 auto;
+
+      img {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+      }
+    }
+
+    .contact_info {
+      margin-left: 24px;
+
+      th,
+      td {
+        padding: 0.1rem 0.5rem;
+      }
+
+      td {
+        font-size: 15px;
+        font-weight: 500;
+        color: #888888;
+
+        a {
+          color: #0d6efd;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.comparison_graph {
+  .project_progress_date {
+    background-color: #084073;
+    padding: 12px 10px;
+    text-align: center;
+
+    h4 {
+      font-size: 19px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+  }
+
+  .progress-wrap {
+    margin-top: 10px;
+  }
+
+  .progress-title {
+    color: $black;
+  }
+
+  .progress-bar {
+    background-color: #55CE63;
+  }
+
+  .progress {
+    margin-top: 14px;
+  }
+}

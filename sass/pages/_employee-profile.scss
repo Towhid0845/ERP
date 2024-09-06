@@ -1,0 +1,397 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.employee_profile {
+  .content_widget_box {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ededed;
+    border-radius: 10px;
+  }
+
+  .profile_image {
+
+    .image {
+      flex: 0 0 auto;
+
+      img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+      }
+    }
+
+    .text {
+      margin-left: 24px;
+
+      .title {
+        @include font(22px, 600);
+      }
+
+      span {
+        @include font(13px, 500);
+        color: $secondary;
+        display: block;
+      }
+
+      h6 {
+        @include font(14px, 600);
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .profile_info {
+    border-left: 2px dashed #949494;
+    padding-left: 50px;
+
+    th,
+    td {
+      padding: .3rem .5rem;
+    }
+
+    td {
+      @include font(15px, 500);
+      color: $secondary;
+
+      a {
+        color: #0d6efd;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .profile_info_widget {
+    .title {
+      @include font(18px, 600);
+      margin-bottom: 20px;
+    }
+
+    th,
+    td {
+      padding: .3rem .5rem;
+    }
+
+    td {
+      @include font(15px, 500);
+      color: $secondary;
+
+      a {
+        color: #0d6efd;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .experiance_box {
+    padding-bottom: 20px;
+
+    ul {
+      position: relative;
+      padding-left: 30px;
+
+      li {
+        position: relative;
+
+        h5 {
+          @include font(16px, 600);
+          margin-bottom: 10px;
+        }
+
+        h6 {
+          @include font(14px, 600);
+          color: $secondary;
+        }
+
+        span {
+          color: $secondary;
+          @include font(13px, 500)
+        }
+
+        &::after {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: #c5c5c5;
+          position: absolute;
+          left: -30px;
+          top: 3px;
+          content: "";
+        }
+      }
+
+      &::before {
+        width: 2px;
+        height: 100%;
+        background-color: #c5c5c5;
+        position: absolute;
+        left: 5px;
+        top: 8px;
+        content: "";
+      }
+    }
+
+    ul+ul {
+      padding-top: 24px;
+    }
+  }
+
+  .award_box {
+    padding-top: 30px;
+
+    .award_item {
+      width: 100%;
+      border-radius: 10px;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      padding: 0 20px 12px;
+
+      .award_info {
+        width: 100%;
+        height: 110%;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        position: relative;
+        top: -12px;
+        text-align: center;
+        padding: 24px;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: -11px;
+          width: 11px;
+          height: 14px;
+          content: "";
+          clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        }
+
+        i {
+          font-size: 45px;
+          color: $white;
+        }
+      }
+    }
+
+    .award_label {
+      .award_title {
+        margin-top: 12px;
+        @include font(17px, 600);
+      }
+    }
+
+    .award_label:first-child {
+      .award_item {
+        background-color: #E6F7FC;
+
+        .award_info {
+          background-color: #1EB1C5;
+
+          &::before {
+            background-color: #148e9e;
+          }
+        }
+      }
+    }
+
+    .award_label:nth-child(2) {
+      .award_item {
+        background-color: #E6F9F3;
+
+        .award_info {
+          background-color: #2EBC8C;
+
+          &::before {
+            background-color: #229e75;
+          }
+        }
+      }
+    }
+
+    .award_label:nth-child(3) {
+      .award_item {
+        background-color: #EBEFF4;
+
+        .award_info {
+          background-color: #2A9EE0;
+
+          &::before {
+            background-color: rgb(15, 122, 136);
+          }
+        }
+      }
+    }
+
+    .award_label:nth-child(4) {
+      .award_item {
+        background-color: #EBEFF4;
+
+        .award_info {
+          background-color: #2A9EE0;
+
+          &::before {
+            background-color: rgb(15, 122, 136);
+          }
+        }
+      }
+    }
+
+    .award_label:nth-child(5) {
+      .award_item {
+        background-color: #E6F9F3;
+
+        .award_info {
+          background-color: #2EBC8C;
+
+          &::before {
+            background-color: #229e75;
+          }
+        }
+      }
+    }
+
+    .award_label:nth-child(6) {
+      .award_item {
+        background-color: #EBEFF4;
+
+        .award_info {
+          background-color: #2A9EE0;
+
+          &::before {
+            background-color: rgb(15, 122, 136);
+          }
+        }
+      }
+    }
+
+    .award_label:nth-child(7) {
+      .award_item {
+        background-color: #EBEFF4;
+
+        .award_info {
+          background-color: #2A9EE0;
+
+          &::before {
+            background-color: rgb(15, 122, 136);
+          }
+        }
+      }
+    }
+
+    .award_label:nth-child(8) {
+      .award_item {
+        background-color: #E6F9F3;
+
+        .award_info {
+          background-color: #2EBC8C;
+
+          &::before {
+            background-color: #229e75;
+          }
+        }
+      }
+    }
+
+    .award_label:nth-child(9) {
+      .award_item {
+        background-color: #EBEFF4;
+
+        .award_info {
+          background-color: #2A9EE0;
+
+          &::before {
+            background-color: rgb(15, 122, 136);
+          }
+        }
+      }
+    }
+  }
+
+  .update_info_btn {
+    background-color: $body;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    color: $black;
+    border: 0;
+    position: absolute;
+    font-size: 13px;
+    top: 0;
+    right: 0;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+}
+
+.edit_profile_widget {
+  width: 100%;
+
+  .box_title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .profile_image {
+    flex: 0 0 auto;
+    margin-right: 24px;
+
+    .upload_box {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      label {
+        width: 38px;
+        height: 38px;
+        background-color: $black;
+        text-align: center;
+        line-height: 34px;
+        border-radius: 50%;
+        color: $white;
+        cursor: pointer;
+        border: 2px solid $white;
+      }
+    }
+  }
+
+}
+
+.editable_information {
+  flex-grow: 1;
+}
+
+.add_more_option {
+  flex: 0 0 auto;
+  margin-left: 18px;
+  width: 70px;
+
+  .option_btn {
+    color: $white;
+    width: 32px;
+    height: 32px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 35px;
+    border: 0;
+    font-size: 16px;
+  }
+
+  .add_more_btn {
+    background-color: #148e9e;
+  }
+
+  .delete_btn {
+    background-color: $primary;
+  }
+}

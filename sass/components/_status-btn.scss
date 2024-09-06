@@ -1,0 +1,28 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+
+.status {
+  @include font(12px, 600);
+  color: $white;
+  border-radius: 50px;
+  padding: 0px 16px;
+  line-height: 20px;
+  border: 0;
+}
+
+.status.active {
+  background-color: #009C24;
+}
+
+.status.deactive {
+  background-color: #3F056A;
+}
+
+.status.on_hold {
+  background-color: #D91800;
+}
+
+.status.not_started {
+  background-color: #6777EF;
+}

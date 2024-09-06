@@ -1,0 +1,74 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.leave_application {
+  padding: 30px;
+
+  .body {
+    margin: 24px 0;
+  }
+}
+
+.personal_leave_policy {
+  h4 {
+    @include font(22, 600)
+  }
+
+  span {
+    @include font(13px, 500);
+    color: $secondary;
+  }
+
+  h6 {
+    @include font(14px, 600);
+    margin-top: 3px;
+  }
+}
+
+.leave_company_policy {
+  ul+ul {
+    padding-top: 24px;
+  }
+
+  ul {
+    position: relative;
+    padding-left: 30px;
+
+    &::before {
+      width: 2px;
+      height: 100%;
+      background-color: #c5c5c5;
+      position: absolute;
+      left: 5px;
+      top: 8px;
+      content: "";
+    }
+
+    li {
+      position: relative;
+
+      h5 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      h6 {
+        font-size: 14px;
+        font-weight: 600;
+        color: #888888;
+      }
+
+      &::after {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #c5c5c5;
+        position: absolute;
+        left: -30px;
+        top: 3px;
+        content: "";
+      }
+    }
+  }
+}

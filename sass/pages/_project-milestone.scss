@@ -1,0 +1,61 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.project_milestone_details {
+  // .milestone_label {
+  //   &:first-child {
+  //     .milestone_title {
+  //       background-color: #ce8208;
+  //     }
+  //   }
+
+  //   &:nth-child(2) {
+  //     .milestone_title {
+  //       background-color: #00A7D0;
+  //     }
+  //   }
+
+  //   &:nth-child(3) {
+  //     .milestone_title {
+  //       background-color: #00A65A;
+  //     }
+  //   }
+
+  //   &:nth-child(4) {
+  //     .milestone_title {
+  //       background-color: #FF4560;
+  //     }
+  //   }
+  // }
+
+  // .milestone_title {
+  //   padding: 30px 24px;
+
+  //   h4 {
+  //     @include font(24px, 400);
+  //     color: $white;
+
+  //     sup {
+  //       @include font(16px, 300);
+  //       margin-left: 10px;
+  //     }
+  //   }
+  // }
+
+  // .sub_title {
+  //   table {
+  //     padding: 14px;
+  //     th,td{
+  //       vertical-align: middle;
+  //     }
+  //     td{
+  //       @include font(14px, 500)
+  //     }
+  //   }
+  // }
+
+  .task_board_column {
+    background-color: #ECF0F4;
+    height: calc(100vh - 284px) !important;
+  }
+}

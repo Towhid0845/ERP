@@ -1,0 +1,646 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+header {
+  background-color: $white;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  margin-bottom: 80px;
+  z-index: 999;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.04), 0 1px 6px rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid $border-colour;
+
+  .container-fluid {
+    padding: 0 20px 0 10px;
+  }
+
+  .mobile__menu {
+    width: 35px;
+    height: 32px;
+    background-color: $primary;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 32px;
+    color: $white;
+    cursor: pointer;
+  }
+
+  .header-logo {
+    margin-left: 8px;
+
+    img {
+      width: 110px
+    }
+  }
+
+  .date-and-time {
+    .dates {
+      h5 {
+        @include font(17px, 700);
+        color: $primary;
+      }
+    }
+
+    .times {
+      h5 {
+        margin: 0 20px;
+        @include font(22px, 700);
+        color: $black;
+      }
+    }
+  }
+
+  .messages,
+  .notification {
+    .short_btn {
+      width: 40px;
+      height: 40px;
+      background-color: $background;
+      border-radius: 5px;
+      text-align: center;
+      line-height: 40px;
+      color: $black;
+      font-size: 18px;
+      border: 0;
+      margin-right: 15px;
+
+      &:hover {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+
+  .messages {
+    .short_btn {
+      position: relative;
+
+      sup {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-color: $primary;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 16px;
+        color: $white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include font(11px, 700);
+      }
+    }
+
+    .message_dropdown {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 1px 12px rgba(0, 0, 0, 0.1);
+      background-color: $white;
+      border-radius: 5px;
+      width: 330px;
+      cursor: unset;
+      padding: 0;
+      overflow: hidden;
+
+      .message_header {
+        background-color: $primary;
+        padding: 12px 20px;
+
+        h3 {
+          @include font(20px, 700);
+          color: $white;
+        }
+
+        .mark {
+          @include font(14px, 500);
+          color: $white;
+          background-color: transparent;
+          border: 0;
+          padding: 0;
+        }
+      }
+
+      .message_main {
+        height: 300px;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: $scrollbar_color transparent;
+
+        ul {
+          li+li {
+            border-top: 1px solid $border-colour;
+          }
+
+          li {
+            padding: 10px 20px;
+            align-items: center;
+
+            &:hover {
+              background-color: #EEF4FD;
+            }
+
+            a {
+              color: $black;
+
+              .img {
+                width: 50px;
+
+                img {
+                  width: 35px;
+                  height: 35px;
+                  border-radius: 50%;
+                }
+              }
+
+              .text {
+                h6 {
+                  @include font(15px, 500)
+                }
+
+                small {
+                  color: #686868;
+                  @include font(12px, 500);
+                }
+
+                span {
+                  @include font(13px, 500);
+                  margin-top: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      /* width */
+      .message_main::-webkit-scrollbar {
+        width: 8px;
+        border-radius: 10px;
+      }
+
+      /* Track */
+      .message_main::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      /* Handle */
+      .message_main::-webkit-scrollbar-thumb {
+        background: $scrollbar_color;
+        border-radius: 10px;
+      }
+
+      .message_footer {
+        .read_all {
+          padding: 10px;
+          @include font(14px, 500);
+          border: 1px solid $border-colour;
+          width: 100%;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .notification {
+    position: relative;
+
+    .short_btn {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 10px;
+        height: 10px;
+        background-color: $primary;
+        border-radius: 50%;
+        content: "";
+        transition: var(--transition);
+        animation: blink .4s infinite alternate;
+      }
+
+      &:hover {
+        &::before {
+          background-color: $white;
+        }
+      }
+    }
+
+    .notification_dropdown {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 1px 12px rgba(0, 0, 0, 0.1);
+      background-color: $white;
+      border-radius: 5px;
+      width: 330px;
+      cursor: unset;
+      padding: 0;
+      overflow: hidden;
+
+      .notification_header {
+        background-color: $primary;
+        padding: 12px 20px;
+
+
+        h3 {
+          @include font(20px, 700);
+          color: $white;
+        }
+
+        .mark {
+          @include font(14px, 500);
+          color: $white;
+          background-color: transparent;
+          border: 0;
+          padding: 0;
+        }
+      }
+
+      .notification_main {
+        height: 300px;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: $scrollbar_color transparent;
+
+        ul {
+          li+li {
+            border-top: 1px solid $border-colour;
+          }
+
+          li {
+            padding: 10px 20px;
+            align-items: center;
+
+            &:hover {
+              background-color: #EEF4FD;
+            }
+
+            a {
+              color: $black;
+
+              .icon {
+                width: 30px;
+
+                i {
+                  font-size: 18px;
+                }
+              }
+
+              .info {
+                width: 220px;
+
+                h6 {
+                  @include font(14px, 500);
+                }
+
+                span {
+                  @include font(12px, 500);
+                  color: #8b8b8b;
+                }
+              }
+            }
+
+            .close {
+              margin-left: 10px;
+              width: 30px;
+              text-align: right;
+
+              .close_btn {
+                background-color: transparent;
+                border: 0;
+                color: #8b8b8b;
+
+                &:hover {
+                  color: $primary;
+                }
+              }
+            }
+          }
+
+          li.one {
+            .icon {
+              i {
+                filter: invert(77%) sepia(4%) saturate(5247%) hue-rotate(85deg) brightness(88%) contrast(95%);
+              }
+            }
+          }
+
+          li.two {
+            .icon {
+              i {
+                filter: invert(67%) sepia(95%) saturate(5173%) hue-rotate(214deg) brightness(101%) contrast(101%)
+              }
+            }
+          }
+
+          li.three {
+            .icon {
+              i {
+                filter: invert(69%) sepia(81%) saturate(523%) hue-rotate(353deg) brightness(101%) contrast(102%)
+              }
+            }
+          }
+
+          li.four {
+            .icon {
+              i {
+                filter: invert(24%) sepia(94%) saturate(7102%) hue-rotate(356deg) brightness(103%) contrast(100%)
+              }
+            }
+          }
+
+          li.five {
+            .icon {
+              i {
+                filter: invert(19%) sepia(98%) saturate(7474%) hue-rotate(284deg) brightness(105%) contrast(117%)
+              }
+            }
+          }
+        }
+      }
+
+      /* width */
+      .notification_main::-webkit-scrollbar {
+        width: 8px;
+        border-radius: 10px;
+      }
+
+      /* Track */
+      .notification_main::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      /* Handle */
+      .notification_main::-webkit-scrollbar-thumb {
+        background: $scrollbar_color;
+        border-radius: 10px;
+      }
+
+      .notification_footer {
+        .read_all {
+          padding: 10px;
+          @include font(14px, 500);
+          border: 1px solid $border-colour;
+          width: 100%;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: .5;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .profile {
+    position: relative;
+
+    button {
+      background-color: $background;
+      border-radius: 5px;
+      color: $black;
+      border: 0;
+      padding: 5px 10px;
+      height: 40px;
+
+      .name {
+        @include font(15px, 700);
+        margin-right: 10px;
+      }
+
+      .img {
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          border: 1px solid $black;
+        }
+      }
+    }
+
+
+    .profile_dropdown {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 1px 12px rgba(0, 0, 0, 0.1);
+      background-color: $white;
+      border-radius: 5px;
+      width: 240px;
+      cursor: unset;
+      padding: 12px 0;
+
+      ul {
+        li {
+          a {
+            @include font(15px, 500);
+            color: $black;
+            padding: 10px 24px;
+            display: flex;
+            align-items: center;
+
+            i {
+              margin-right: 10px;
+            }
+
+            &:hover {
+              background-color: #EDEDED;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .dropdown-toggle::after {
+    display: none;
+  }
+}
+
+.dropdown-menu {
+  transition: var(--transition);
+  transform: translate(20px, 0) scale(0);
+  transform-origin: top right;
+}
+
+.mobile_menu {
+  .times {
+    margin-right: auto;
+
+    h5 {
+      @include font(24px, 700);
+      color: $white;
+    }
+  }
+
+  .messages .message_dropdown .message_main ul li a .img {
+    width: 61px;
+  }
+
+  .messages .short_btn,
+  .notification .short_btn {
+    margin-right: 0;
+    margin-left: 18px;
+  }
+
+  .notification .notification_dropdown {
+    width: 300px;
+  }
+
+  .notification .notification_dropdown .notification_main ul li a .info {
+    width: 200px;
+  }
+
+
+  .messages .message_dropdown {
+    width: 300px;
+  }
+
+  // mobile menu start
+  .mobile-menu-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition-duration: .3s;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .mobile-menu-main {
+    width: 320px;
+    height: 100%;
+    background-color: $black;
+    position: fixed;
+    top: 0;
+    left: -320px;
+    z-index: 999;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition-duration: .3s;
+
+    .close-m-menu {
+      text-align: right;
+
+      i {
+        width: 40px;
+        height: 40px;
+        background-color: $black;
+        text-align: center;
+        line-height: 40px;
+        color: $white;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all linear .2s;
+
+        &:hover {
+          background-color: $primary;
+        }
+      }
+    }
+
+    .menu-body {
+      padding: 20px;
+
+      .menu-list {
+        padding-top: 10px;
+
+        ul {
+          li {
+            margin-bottom: 4px;
+
+            a {
+              @include font(15px, 500);
+              color: $white;
+              border: 1px solid rgba(255, 255, 255, 0.3);
+              width: 100%;
+              transition: var(--transition);
+              padding: 10px 18px;
+              padding-left: 40px;
+              border-radius: 5px;
+              position: relative;
+
+              &:hover {
+                color: $primary;
+              }
+
+              .nav__icon {
+                margin-right: 5px;
+                position: absolute;
+                top: 11px;
+                left: 14px;
+                font-size: 14px;
+              }
+
+              .menu__name {
+                max-width: 190px;
+              }
+
+              .arrow {
+                position: absolute;
+                right: 18px;
+                top: 10px;
+
+                i {
+                  color: $white;
+                  text-align: center;
+                  transition: var(--transition)
+                }
+              }
+            }
+
+            a.active {
+              color: $primary;
+
+              i {
+                color: $primary;
+              }
+            }
+
+            ul {
+              padding-left: 20px;
+              display: none;
+              margin-top: 4px;
+
+              a {
+                padding-left: 18px;
+
+                i {
+                  font-size: 12px;
+                  margin-right: 4px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .show-mobile-menu-overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .show-mobile-menu {
+    left: 0 !important;
+  }
+}

@@ -1,0 +1,46 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.data_table {
+  .table_head {
+    background-color: #DAE1F3;
+    color: $black;
+
+    th {
+      cursor: pointer;
+    }
+
+    .sort_icon {
+      font-size: 12px;
+      margin-left: 5px;
+    }
+  }
+
+  .status {
+    @include font(12px, 600);
+    color: $white;
+    border-radius: 30px;
+    line-height: 22px;
+    padding: 0 10px;
+  }
+
+  .status_complete {
+    background-color: #009C24;
+  }
+
+  .status_not_complete {
+    background-color: #3F056A;
+  }
+
+  .status_on_hold {
+    background-color: #D91800;
+  }
+
+  .status_in_progress {
+    background-color: #FFA117;
+  }
+
+  .status_not_started {
+    background-color: #6777EF;
+  }
+}

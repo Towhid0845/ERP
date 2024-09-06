@@ -1,0 +1,79 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.comments_box {
+  padding-bottom: 20px;
+
+  ul {
+    position: relative;
+    padding-left: 40px;
+
+    li {
+      position: relative;
+
+      .user {
+        img {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          flex: 0 0 auto;
+        }
+
+        .text {
+          margin-left: 14px;
+
+          h4 {
+            @include font(15px, 600);
+            line-height: 14px;
+          }
+
+          span {
+            line-height: 14px;
+          }
+        }
+      }
+
+      .cmnt {
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        padding: 4px 10px;
+      }
+
+      h5 {
+        @include font(16px, 600);
+        margin-bottom: 10px;
+        color: $primary
+      }
+
+      span {
+        color: $secondary;
+        @include font(13px, 500)
+      }
+
+      &::after {
+        border-radius: 50%;
+        background-color: $white;
+        position: absolute;
+        font-size: 22px;
+        left: -38px;
+        top: 3px;
+        content: "\f075";
+        font-family: "Font Awesome 5 Free";
+      }
+    }
+
+    &::before {
+      width: 2px;
+      height: 100%;
+      background-color: #c5c5c5;
+      position: absolute;
+      left: 12px;
+      top: 8px;
+      content: "";
+    }
+  }
+
+  ul+ul {
+    padding-top: 24px;
+  }
+}

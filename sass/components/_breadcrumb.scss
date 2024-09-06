@@ -1,0 +1,60 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.bread_crumb {
+  .left_info {
+    .title {
+      @include font(17px, 700);
+    }
+  }
+  .notification{
+    p{
+      @include font(16px, 600);
+      color: $black
+    }
+  }
+
+  .right_info {
+    ul {
+      li {
+        @include font(15px, 500);
+        color: black;
+        display: inline-block;
+        position: relative;
+        padding-right: 20px;
+        margin-right: 8px;
+
+        a {
+          color: $primary;
+          display: flex;
+          align-items: center;
+
+          i {
+            font-size: 13px;
+            margin-right: 5px;
+          }
+        }
+
+        &::before {
+          font-family: "Font Awesome 6 Free";
+          font-weight: 900;
+          content: "\f105";
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          font-size: 14px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+          padding-right: 0;
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

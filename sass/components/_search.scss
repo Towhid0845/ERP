@@ -1,0 +1,29 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+.search__ {
+  margin-bottom: 5px;
+  input {
+    background-color: #f2f2f2;
+  }
+
+  .select2-container .select2-selection--single {
+    background: #f2f2f2;
+  }
+
+  .search_btn_ {
+    background-color: $primary;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+    @include font(15px, 600);
+    text-transform: uppercase;
+    width: 50%;
+    color: $white;
+    border: 0;
+
+    &:hover {
+      background-color: $black;
+    }
+  }
+}

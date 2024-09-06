@@ -1,0 +1,758 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+/* width */
+.task_board_column::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+}
+
+/* Track */
+.task_board_column::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.task_board_column::-webkit-scrollbar-thumb {
+  background: $scrollbar_color;
+  border-radius: 10px;
+}
+
+.task_board_header {
+  background-color: $body;
+  border-radius: 5px;
+  padding: 14px;
+}
+
+.task_board_header {
+  background-color: $body;
+  border-radius: 5px;
+  padding: 8px 10px;
+  margin-bottom: 20px;
+
+  .options {
+    li {
+      display: inline-block;
+
+      .option_link {
+        @include font(14px, 500);
+        background-color: transparent;
+        color: $black;
+        border-radius: 3px;
+        padding: 5px 10px;
+        border: 0;
+
+        i {
+          margin-right: 3px;
+        }
+
+        &:hover {
+          background-color: $primary;
+          color: $white;
+        }
+      }
+    }
+
+    li.active {
+      .option_link {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+
+  .mobile_task_menu_options {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition-duration: 0.3s;
+    z-index: 999;
+    width: 220px;
+    height: 100%;
+    background-color: $white;
+    padding: 24px;
+    filter: drop-shadow(0 0px 6px rgba(34, 34, 34, 0.15));
+    padding-top: 60px;
+
+    li {
+      display: block;
+
+      .option_link {
+        display: block;
+        padding: 7px 13px;
+        margin-bottom: 4px;
+        width: 100%;
+        text-align: left;
+      }
+    }
+
+  }
+
+  .close_mobile_task_menu_options {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+    transition: var(--transition);
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  .mobile_short_option_btn {
+    @include font(14px, 500);
+    color: $white;
+    background-color: $black;
+    border-radius: 3px;
+    padding: 5px 10px;
+    filter: drop-shadow(0 0px 6px rgba(34, 34, 34, 0.15));
+    border: 0
+  }
+
+  .mobile_task_menu_options.active {
+    left: 0
+  }
+
+  .filter {
+    .filter_menu {
+      @include font(14px, 500);
+      color: $black;
+      background-color: $white;
+      border-radius: 3px;
+      border: 1px solid $border-colour;
+      padding: 5px 10px;
+      filter: drop-shadow(0 0px 6px rgba(34, 34, 34, 0.15));
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+        border-color: $black;
+      }
+    }
+  }
+}
+
+.offcanvas_overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(28, 34, 49, 0.8);
+  top: 0;
+  right: -100%;
+  z-index: 999;
+  transition-duration: .4s;
+  opacity: 0;
+}
+
+.task_offcanvas_menu {
+  position: fixed;
+  width: 340px;
+  height: 100%;
+  background-color: $white;
+  top: 0;
+  right: -100%;
+  z-index: 9999;
+  filter: drop-shadow(-6px 0px 10px rgba(34, 34, 34, 0.15));
+  transition-duration: .4s;
+  transition-delay: .2s;
+  opacity: 0;
+
+
+  .title {
+    @include font(17px, 600);
+    border-bottom: 1px solid $border-colour;
+    padding: 15px;
+    padding-left: 30px;
+  }
+
+  .filter_info {
+    padding: 30px;
+
+    .filter_block {
+      margin-bottom: 24px;
+
+      .input-groups {
+        label {
+          @include font(14px, 500);
+          margin-bottom: 2px;
+        }
+
+        .keyword {
+          width: 100%;
+          height: 40px;
+          background-color: transparent;
+          border: 1px solid rgba(28, 34, 49, 0.4);
+          border-radius: 4px;
+          padding: 0 20px;
+          transition: var(--transition);
+
+          &:focus {
+            border-color: $black;
+          }
+        }
+      }
+
+      .label_title {
+        @include font(14px, 500);
+        margin-bottom: 10px;
+      }
+
+      .form-check {
+        input {
+          width: 20px;
+          height: 20px;
+          border: 2px solid rgba(0, 0, 0, 0.4);
+          cursor: pointer;
+          margin-right: 15px;
+        }
+
+        .form-check-label {
+          margin-bottom: 5px;
+          cursor: pointer;
+          @include font(14px, 500);
+
+          span {
+            width: 240px;
+            display: block;
+            border-radius: 5px;
+            padding: 1px 14px;
+            color: $white;
+          }
+
+          span.high {
+            background-color: #F87462;
+          }
+
+          span.medium {
+            background-color: #9F8FEF;
+          }
+
+          span.low {
+            background-color: #E2B203;
+          }
+        }
+      }
+
+      .form-check-input:checked {
+        background-color: $primary;
+        border-color: $primary;
+      }
+
+      .show_more_btn {
+        background-color: transparent;
+        border: 0;
+        @include font(15px, 500);
+        color: $black;
+        margin-top: 5px;
+
+        &:hover {
+          color: $primary;
+        }
+
+        i {
+          margin-left: 4px;
+          position: relative;
+          top: 2px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .date_block {
+    .date_time_icon {
+      width: 28px;
+      height: 28px;
+      background-color: #94C748;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      color: $white;
+      margin-right: 5px;
+    }
+  }
+}
+
+.offcanvas_active {
+  right: 0;
+  opacity: 1;
+}
+
+.close_offcanvas {
+  position: absolute;
+  top: 15px;
+  right: 24px;
+  background-color: transparent;
+  border: 0;
+  font-size: 18px;
+}
+
+.task_scroll_container {
+  position: relative;
+
+  .task_body {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scrollbar-color: $scrollbar_color transparent;
+
+    .task_label {
+      &:nth-child(2) {
+        .task_board_title {
+          .title {
+            background-color: #8374cc;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        .task_board_title {
+          .title {
+            background-color: #83b13f;
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        .task_board_title {
+          .title {
+            background-color: #cca000;
+          }
+        }
+      }
+
+      &:nth-child(5) {
+        .task_board_title {
+          .title {
+            background-color: #dd6454;
+          }
+        }
+      }
+
+      &:nth-child(6) {
+        .task_board_title {
+          .title {
+            background-color: #d1a400;
+          }
+        }
+      }
+      &:nth-child(7) {
+        .task_board_title {
+          .title {
+            background-color: #ff553e;
+          }
+        }
+      }
+      &:nth-child(8) {
+        .task_board_title {
+          .title {
+            background-color: #009973;
+          }
+        }
+      }
+      &:nth-child(9) {
+        .task_board_title {
+          .title {
+            background-color: #2338f1;
+          }
+        }
+      }
+      &:nth-child(10) {
+        .task_board_title {
+          .title {
+            background-color: #d908e0;
+          }
+        }
+      }
+    }
+
+    .task_board_title {
+      .title {
+        background-color: $black;
+        color: $white;
+        padding: 10px 14px;
+        @include font(16px, 700);
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+
+        i {
+          margin-right: 5px;
+        }
+
+        .number_count {
+          @include font(12px, 600);
+          background-color: $white;
+          color: $black;
+          text-align: center;
+          margin-left: 30px;
+          padding: 2px 12px;
+          border-radius: 3px;
+          float: right;
+          text-align: center;
+        }
+      }
+    }
+
+    .task_board_column {
+      background-color: $body;
+      height: calc(100vh - 358px);
+      width: 100%;
+      border-radius: 5px;
+      padding: 14px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: $scrollbar_color transparent;
+
+      .task_card {
+        padding: 12px;
+        background-color: $white;
+        border-radius: 5px;
+        border: 1px solid #C5C5C5;
+        margin-bottom: 8px;
+
+        .image {
+          margin-bottom: 8px;
+
+          img {
+            border-radius: 5px;
+          }
+        }
+
+        .tag {
+          margin-bottom: 10px;
+
+          li {
+            display: inline-block;
+
+            button {
+              @include font(11px, 500);
+              background-color: $black;
+              color: $white;
+              border-radius: 3px;
+              border: 0;
+              padding: 2px 6px 2px 6px;
+              line-height: 18px
+            }
+          }
+        }
+
+        .task_title {
+          @include font(16px, 500);
+          color: $black;
+          line-height: 22px;
+          margin-bottom: 6px;
+        }
+
+        .dates {
+          border-bottom: 1px solid $border-colour;
+          padding-bottom: 6px;
+          margin-bottom: 8px;
+
+          .icon {
+            margin-right: 10px;
+
+            i {
+              font-size: 30px;
+              color: rgba(57, 67, 92, 0.5);
+            }
+          }
+
+          .info {
+
+            p {
+              @include font(12px, 400);
+              line-height: 18px
+            }
+
+            b {
+              @include font(12px, 600);
+            }
+          }
+        }
+
+        .task_done_status {
+          background-color: $body;
+          padding: 0px 8px;
+          border-radius: 4px;
+          @include font (11px, 600);
+          color: $white;
+          background-color: green;
+          border: 0;
+          margin-bottom: 8px;
+        }
+
+        .time_and_status {
+          margin-bottom: 8px;
+
+          .status {
+            border: 1px solid $border-colour;
+            background-color: $body;
+            padding: 2px 8px;
+            border-radius: 4px;
+
+            .form-check,
+            label {
+              cursor: pointer;
+            }
+
+            label {
+              @include font(14px, 500);
+              position: relative;
+              top: 2px;
+              margin-left: 8px;
+              color: $black;
+            }
+          }
+
+          .time_start {
+            border: 1px solid $border-colour;
+            background-color: $body;
+            padding: 2px 8px;
+            border-radius: 4px;
+
+            .time {
+              margin-right: 10px;
+
+              #task_countdown_timer {
+                @include font(13px, 600);
+              }
+            }
+
+            .start {
+              button {
+                background-color: transparent;
+                border: 0;
+                border: 1px solid $black;
+                background-color: $white;
+                width: 24px;
+                height: 24px;
+                line-height: 24px;
+                text-align: center;
+                border-radius: 3px;
+                font-size: 12px
+              }
+            }
+          }
+        }
+
+        .see_details {
+          a {
+            @include font(14px, 500);
+            background-color: $body;
+            color: $black;
+            padding: 6px 10px;
+            border-radius: 4px;
+
+            &:hover {
+              background-color: $black;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .priority_high {
+    background-color: #dd6454 !important;
+  }
+
+  .priority_medium {
+    background-color: #8374cc !important;
+  }
+
+  .priority_low {
+    background-color: #a07d00 !important;
+  }
+
+  #scroll-left,
+  #scroll-right {
+    display: none;
+  }
+
+  .scroll_btn {
+    width: 40px;
+    height: 70px;
+    background-color: $white;
+    filter: drop-shadow(0 5px 6px rgba(34, 34, 34, 0.1));
+    border: 0;
+    font-size: 18px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  .scroll_btn_left {
+    left: 0;
+  }
+
+  .scroll_btn_right {
+    right: 0;
+  }
+}
+
+/* width */
+.task_body::-webkit-scrollbar {
+  height: 8px;
+  border-radius: 10px;
+  display: none;
+}
+
+/* Track */
+.task_body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.task_body::-webkit-scrollbar-thumb {
+  background: $scrollbar_color;
+  border-radius: 10px;
+}
+
+// modal css
+.modal-header {
+  border: 0 !important;
+}
+
+.modal-content {
+  overflow: hidden;
+
+  .modal-body {
+    padding: 0;
+  }
+}
+
+.modal__image {
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: -47px;
+
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.task_info_details {
+  background-color: $body;
+  padding: 30px;
+
+  .info_item+.info_item {
+    margin-top: 30px;
+  }
+
+  .info_item {
+    display: flex;
+
+    .icon {
+      margin-right: 15px;
+
+      i {
+        position: relative;
+        top: -2px;
+      }
+    }
+
+    .details {
+      h4 {
+        @include font(18px, 500);
+        margin-bottom: 15px;
+      }
+
+      p {
+        @include font(16px, 400);
+      }
+    }
+
+    .attachment_main+.attachment_main {
+      margin-top: 14px;
+    }
+
+    .attachment_image {
+      overflow: hidden;
+      margin-right: 14px;
+      flex: 0 0 auto;
+
+      img {
+        border-radius: 5px;
+      }
+    }
+
+    .attachment_text {
+
+      a {
+        @include font(16px, 500);
+        color: $black;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+
+      span {
+        @include font(14px, 400)
+      }
+    }
+  }
+
+  .task_info_sidebar {
+    padding-left: 30px;
+
+    .sidebar_item {
+      .title {
+        @include font(15px, 500);
+        margin-bottom: 8px;
+      }
+
+      .action_btn {
+        background-color: $white;
+        border: 1px solid $border-colour;
+        padding: 4px 20px;
+        border-radius: 4px;
+        @include font(13px, 500);
+        color: rgba(0, 0, 0, 0.7);
+        text-align: left;
+        width: 100%;
+        margin-bottom: 5px;
+
+        &:hover {
+          background-color: $black;
+          color: $white;
+        }
+
+        i {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+}
+
+.mfp-bg {
+  z-index: 9999;
+  opacity: .96;
+  background-color: $black;
+}
+
+.mfp-wrap {
+  z-index: 99999;
+}
+
+// add new column part
+.add_new_column_form {
+  padding: 30px;
+  padding-top: 0;
+}

@@ -1,0 +1,22 @@
+@import "../variable/variable";
+@import "../mixin/font";
+
+main {
+  display: flex;
+}
+
+/* width */
+body::-webkit-scrollbar {
+  width: 15px;
+  border-radius: 10px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #8793B4;
+}
